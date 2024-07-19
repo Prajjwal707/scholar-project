@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables Example</title>
+    <style>
+     :root {
+          --primary-color: #3498db;
+          --secondary-color: #2ecc71;
+          --background-color: #f5f5f5;
+          --text-color: #333;
+      
+          --font-size-small: 0.875rem;
+          --font-size-medium: 1rem;
+          --font-size-large: 1.5rem;
+
+          --spacing-small: 0.5rem;
+          --spacing-medium: 1rem;
+          --spacing-large: 2rem;
+      }
+      
+      body {
+          background-color: var(--background-color);
+          color: var(--text-color);
+          font-size: var(--font-size-medium);
+          margin: var(--spacing-medium);
+      }
+      
+      header {
+          background-color: var(--primary-color);
+          padding: var(--spacing-large);
+          text-align: center;
+      }
+      
+      header h1 {
+          color: #fff;
+          font-size: var(--font-size-large);
+          margin: 0;
+      }
+      
+      main {
+          padding: var(--spacing-medium);
+      }
+      
+      section {
+          margin-bottom: var(--spacing-large);
+      }
+      
+      section h2 {
+          color: var(--primary-color);
+          font-size: var(--font-size-large);
+          margin-bottom: var(--spacing-small);
+      }
+      
+      section p {
+          font-size: var(--font-size-medium);
+          line-height: 1.5;
+      }
+      
+      footer {
+          background-color: var(--secondary-color);
+          padding: var(--spacing-medium);
+          text-align: center;
+      }
+      
+      footer p {
+          color: #fff;
+          font-size: var(--font-size-small);
+          margin: 0;
+      }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    <main>
+        <section>
+            <h2>About</h2>
+            <p>This is an example of a webpage using CSS variables for styling.</p>
+        </section>
+        <section>
+            <h2>Services</h2>
+            <p>We offer a variety of services to meet your needs.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Flexbox Layout</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            color: #00796b;
+        }
+
+        .header {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2em;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: flex-start;
+            margin-bottom: 2em;
+            background-color: #ffffff;
+            padding: 1em;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .primary {
+            max-width: 1200px;
+        }
+
+        .secondary {
+            max-width: 1000px;
+        }
+
+        .flex-item {
+            background-color: #00796b;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1 1 200px; 
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .order-1 { order: 1; }
+        .order-2 { order: 2; }
+        .order-3 { order: 3; }
+
+        .nested-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1 1 100%; 
+            background-color: #004d40;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .nested-item {
+            background-color: #a7ffeb;
+            color: #004d40;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            flex: 1 1 150px;
+        }
+
+        .secondary-item:nth-child(odd) {
+            background-color: #004d40;
+        }
+
+        .secondary-item:nth-child(even) {
+            background-color: #00796b;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Complex Flexbox Layout</h1>
+    </header>
+    <section class="main-container">
+        <div class="flex-container primary">
+            <div class="flex-item order-3">Primary Item 1</div>
+            <div class="flex-item order-1">Primary Item 2</div>
+            <div class="flex-item order-2">Primary Item 3</div>
+            <div class="flex-item nested-container">
+                <div class="nested-item">Nested Item 1</div>
+                <div class="nested-item">Nested Item 2</div>
+                <div class="nested-item">Nested Item 3</div>
+                <div class="nested-item">Nested Item 4</div>
+            </div>
+        </div>
+        <div class="flex-container secondary">
+            <div class="flex-item secondary-item">Secondary Item 1</div>
+            <div class="flex-item secondary-item">Secondary Item 2</div>
+            <div class="flex-item secondary-item">Secondary Item 3</div>
+            <div class="flex-item secondary-item">Secondary Item 4</div>
+            <div class="flex-item secondary-item">Secondary Item 5</div>
+            <div class="flex-item secondary-item">Secondary Item 6</div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage with Media Queries</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        .navbar {
+            background-color: #555;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar ul li {
+            margin: 0 1em;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .main-content {
+            flex: 3;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        .sidebar {
+            flex: 1;
+            padding: 20px;
+            background-color: #e0e0e0;
+            border-radius: 8px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        @media (max-width: 1024px) {
+            .navbar ul li a {
+                font-size: 1em;
+            }
+
+            .content {
+                padding: 15px;
+            }
+
+            .main-content, .sidebar {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar ul li {
+                margin: 0.5em 0;
+            }
+
+            .content {
+                flex-direction: column;
+            }
+
+            .main-content, .sidebar {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar ul li a {
+                font-size: 0.9em;
+            }
+
+            .header, .footer {
+                padding: 0.5em;
+            }
+
+            .main-content, .sidebar {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Responsive Webpage</h1>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        <section class="main-content">
+            <h2>Main Content</h2>
+            <p>This is the main content area. It will adjust its layout based on the screen size.</p>
+        </section>
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <p>This is the sidebar. It will move based on the screen size.</p>
+        </aside>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Responsive Webpage Example</p>
+    </footer>
+</body>
+</html>

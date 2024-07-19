@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectors and Properties</title>
+</head>
+<style>
+  p {
+    color: blue;
+    font-size: 16px;
+  }
+
+  .highlight {
+    background-color: rgb(0, 255, 115);
+    font-weight: bold;
+  }
+
+  .sub-title {
+    color: green;
+  }
+
+  #main-title {
+    color: navy;
+    text-align: center;
+  }
+
+  #unique-paragraph {
+    color: maroon;
+    font-style: italic;
+  }
+
+  input[type="text"] {
+    border: 2px solid black;
+    padding: 5px;
+  }
+
+  a:hover {
+    color: orange;
+  }
+
+  button:active {
+    background-color: lightgray;
+  }
+
+  p::first-line {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: lightblue; 
+  }
+</style>
+<body>
+  <h1 id="main-title">Welcome to My Webpage</h1>
+  <h2 class="sub-title">Introduction</h2>
+  <p>This is a paragraph styled with an element selector.</p>
+  <p class="highlight">This paragraph is styled with a class selector.</p>
+  <p>This is another paragraph styled with an element selector.</p>
+  <a href="#" class="link">This is a link styled with a class selector.</a>
+  <p id="unique-paragraph">This paragraph is styled with an id selector.</p>
+  <div class="container">
+    <h2 class="sub-title">List Section</h2>
+    <ul>
+      <li>List item 1</li>
+      <li>List item 2</li>
+      <li>List item 3</li>
+    </ul>
+  </div>
+  <button class="btn" type="button">Click Me</button>
+  <input type="text" placeholder="Enter text here">
+</body>
+</html>

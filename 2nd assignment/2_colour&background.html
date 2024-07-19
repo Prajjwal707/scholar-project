@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors and Backgrounds</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            color: #444;
+        }
+        
+        header {
+            background-color: #004d40;
+            color: #ffffff;
+            text-align: center;
+            padding: 1.5em 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2em;
+        }
+        
+        .box {
+            width: 90%;
+            max-width: 400px;
+            margin: 1em 0;
+            padding: 1.5em;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            color: #333;
+            text-align: center;
+        }
+        .solid-color {
+            background-color: #ff6f61; 
+            color: #ffffff;
+        }
+        .gradient-background {
+            background: linear-gradient(to right, #ffe259, #ffa751); 
+            color: #ffffff;
+        }
+        .image-background {
+            background-image: url('https://www.w3schools.com/w3images/lights.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+        }
+        .image-background-repeat {
+            background-image: url('https://www.w3schools.com/w3images/forest.jpg');
+            background-repeat: repeat;
+        }
+        .image-background-position {
+            background-image: url('https://www.w3schools.com/w3images/mountains.jpg');
+            background-repeat: no-repeat;
+            background-position: bottom right;
+            background-size: 300px 150px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Colors and Backgrounds in CSS</h1>
+    </header>
+    <section class="content">
+        <div class="box solid-color">
+            <h2>Solid Background Color</h2>
+            <p>This box has a solid background color.</p>
+        </div>
+        <div class="box gradient-background">
+            <h2>Gradient Background</h2>
+            <p>This box has a gradient background.</p>
+        </div>
+        <div class="box image-background">
+            <h2>Image Background</h2>
+            <p>This box has a background image.</p>
+        </div>
+        <div class="box image-background-repeat">
+            <h2>Background Image with Repeat</h2>
+            <p>This box has a background image with repeat.</p>
+        </div>
+        <div class="box image-background-position">
+            <h2>Background Image with Position</h2>
+            <p>This box has a background image with a specific position.</p>
+        </div>
+    </section>
+</body>
+</html>
